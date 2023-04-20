@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP9-cherry-pick.md</title>
+  <link rel="stylesheet" href="/Users/rico/Documents/Formations/ELK/prog/markdown-to-html-master/test/ghstyle.css">
+</head>
+<body>
+<h1 id="tp-9-le-cherry-pick">TP 9 : Le cherry-pick</h1>
+<p>Le but de ce TP est de comprendre le cherry-pick</p>
+<h2 id="nouvelle-branche">Nouvelle branche</h2>
+<ul>
+<li>Créer une nouvelle branche depuis la branche master</li>
+<li>Y faire 3 commits</li>
+<li>Repérer le commit du &quot;milieu&quot; et son hash</li>
+<li><p>Se placer à nouveau sur master et utiliser la commande suivante pour répercuter le cherry pick sur la branche master :</p>
+<p>  <code>git cherry-pick &lt;commit hash&gt;</code></p>
+</li>
+</ul>
+<h2 id="conflits">Conflits</h2>
+<p>Des conflits peuvent aussi apparaitre lors d&#39;un cherry-pick. Dans ce cas, résoudre le conflit, puis :</p>
+<pre><code><div class="highlight"><pre><span class="nx">git</span> <span class="nx">add</span> <span class="nx">fichier</span><span class="o">-</span><span class="nx">en</span><span class="o">-</span><span class="nx">conflit</span>
+<span class="nx">git</span> <span class="nx">cherry</span><span class="o">-</span><span class="nx">pick</span> <span class="o">--</span><span class="k">continue</span>
+</pre></div>
+
+</code></pre></body>
+</html>
