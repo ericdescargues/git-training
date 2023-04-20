@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP1-installation.md</title>
+  <link rel="stylesheet" href="/Users/rico/Documents/Formations/ELK/prog/markdown-to-html-master/test/ghstyle.css">
+</head>
+<body>
+<h1 id="tp1-installation-et-configuration-de-git">TP1 : Installation et configuration de GIT</h1>
+<p>Le but de ce TP est de découvrir GIT, l&#39;installer, et le configurer</p>
+<h2 id="t-l-chargement-de-l-installeur-et-configuration-de-votre-environnement-de-travail">Téléchargement de l&#39;installeur et configuration de votre environnement de travail</h2>
+<p>Récupérer l&#39;installeur GIT pour votre système d&#39;exploitation</p>
+<p><a href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p><a href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
+<p>Télécharger et installer votre IDE préféré (sublime text, VSCode, brackets, notepad++)</p>
+<h2 id="installation">Installation</h2>
+<p>Lancer l&#39;installation et suivre le guide</p>
+<p>Pour windows : si demandé, penser à cocher la case &quot;ajouter git.exe dans la variable d&#39;environnement %PATH%&quot;</p>
+<p>Ensuite :</p>
+<ul>
+<li>Lancer une invite de commandes, GitBash sur windows ou un shell classique sur linux/osx</li>
+<li>Vérifier que git est bien disponible en ligne de commande en tapant simplement <code>git -v</code></li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>Avec la commande <code>git config</code>, configurer de manière globale:</p>
+<ul>
+<li>votre identité (nom, email)</li>
+<li>votre éditeur de texte préféré</li>
+<li>(...)</li>
+</ul>
+<p>Vérifier que la configuration est effective</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">list</span>
+</pre></div>
+
+</code></pre><h2 id="d-couverte-des-commandes-disponibles">Découverte des commandes disponibles</h2>
+<p>Lister les commandes git et repérer les similitudes avec les autres CVS que vous connaissez</p>
+<ul>
+<li>Avec la commande <code>git help</code>, lister toutes les commandes disponibles.</li>
+<li>Pour chaque commande disponible, utiliser la commande <code>git &lt;command&gt; -- help</code></li>
+</ul>
+<h2 id="cr-ation-d-un-premier-d-p-t-et-d-couverte-des-commandes-de-base">Création d&#39;un premier dépôt et découverte des commandes de base</h2>
+<p>Utiliser la commande <code>git init</code> pour créer votre premier dépôt.</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">mkdir</span> <span class="nx">mon</span><span class="o">-</span><span class="nx">projet</span>
+
+<span class="nx">$</span> <span class="nx">cd</span> <span class="nx">mon</span><span class="o">-</span><span class="nx">projet</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">init</span>
+</pre></div>
+
+</code></pre><p>Faire une modification puis un commit</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">echo</span> <span class="s2">&quot;# Mon projet&quot;</span> <span class="o">&gt;</span> <span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">status</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">add</span> <span class="nx">README</span><span class="p">.</span><span class="nx">md</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">commit</span> <span class="err">–</span><span class="nx">m</span> <span class="s2">&quot;version initiale du projet&quot;</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">status</span>
+
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">log</span>
+</pre></div>
+
+</code></pre><p>Faire ensuite une autre modification et un deuxième commit</p>
+<h2 id="pr-paration-la-suite">Préparation à la suite</h2>
+<p>Inspecter les fichiers et dossiers dans le dossier <code>.git</code> de votre dépôt</p>
+<p>Inspecter le fichier &quot;.gitconfig&quot; de votre répertoire utilisateur</p>
+</body>
+</html>

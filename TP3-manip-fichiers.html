@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP3-manip-fichiers.md</title>
+  <link rel="stylesheet" href="/Users/rico/Documents/Formations/ELK/prog/markdown-to-html-master/test/ghstyle.css">
+</head>
+<body>
+<h1 id="tp3-manipulation-des-principales-commandes-git-de-gestion-de-modifications-de-fichiers-">TP3 : Manipulation des principales commandes GIT de gestion de modifications de fichiers.</h1>
+<p>Le but de ce TP est de comprendre et d&#39;utiliser les principales commandes de GIT, et gérer la &quot;staging area&quot; (index)</p>
+<p>On utilisera le dépôt du TP2 pour réaliser cet exercice</p>
+<h2 id="modification-d-un-fichier">Modification d&#39;un fichier</h2>
+<ul>
+<li>Dans la branche principale, modifier un seul fichier. Utiliser &quot;git status&quot; pour visualiser les modifications</li>
+<li>Ajouter seulement ce fichier à l&#39;index</li>
+<li>Commiter cette modification</li>
+</ul>
+<h2 id="modification-de-plusieurs-fichiers">Modification de plusieurs fichiers</h2>
+<ul>
+<li>Dans la branche principale, modifier au moins 2 fichiers</li>
+<li>Utiliser la commande git add pour n&#39;ajouter qu&#39;un seul des fichiers à l&#39;index</li>
+<li>Commiter cette modification</li>
+<li>Ajouter ensuite le 2eme fichier à l&#39;index</li>
+<li>Commiter cette seconde modification</li>
+</ul>
+<h2 id="annuler-un-commit">Annuler un commit</h2>
+<ul>
+<li>Modifier un fichier, puis ajouter et commiter</li>
+<li>Annuler ce commit (revenir sur la version précédente) avec la commande</li>
+</ul>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">~</span><span class="mi">1</span>
+</pre></div>
+
+</code></pre><p>Ou bien</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">^</span>
+</pre></div>
+
+</code></pre><p>HEAD^ signifie le commit parent de la version courante (HEAD)</p>
+<p>HEAD^^ signifie 2 commits en arrière depuis la version courante</p>
+<p>HEAD^^^ signifie 3 commits en arrière depuis la version courante</p>
+<p>etc...</p>
+<p>Ou encore</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">~</span><span class="mi">1</span>
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">~</span><span class="mi">2</span>
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">~</span><span class="mi">3</span>   
+</pre></div>
+
+</code></pre><p>Ou encore</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="o">&lt;</span><span class="nx">sha1</span><span class="o">&gt;</span>
+</pre></div>
+
+</code></pre><h2 id="reset-hard">Reset Hard</h2>
+<p>Recommencer la section &quot;annuler un commit&quot; avec la commande <code>reset --hard</code></p>
+<h2 id="changement-de-chemins">Changement de chemins</h2>
+<ul>
+<li>Modifier le nom d&#39;un fichier (README.md =&gt; README.txt)</li>
+<li>Utiliser git status pour voir les changements</li>
+<li>Ajouter et commiter cette modification</li>
+</ul>
+<h2 id="suppression-de-fichier">Suppression de fichier</h2>
+<ul>
+<li>Supprimer un fichier</li>
+<li>Utiliser <code>git status</code> pour voir les changements</li>
+<li>Commiter cette modification</li>
+</ul>
+<h2 id="historique-des-commits">Historique des commits</h2>
+<ul>
+<li>Afficher l&#39;historique des commits en affichant chaque commit sur une seule ligne</li>
+<li>Créer un alias git qui permet d&#39;afficher l&#39;historique des commits de manière condensée</li>
+<li>Utiliser cette alias</li>
+</ul>
+</body>
+</html>

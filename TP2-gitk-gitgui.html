@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP2-gitk-gitgui.md</title>
+  <link rel="stylesheet" href="/Users/rico/Documents/Formations/ELK/prog/markdown-to-html-master/test/ghstyle.css">
+</head>
+<body>
+<h1 id="tp2-cr-ation-et-initialisation-d-un-d-p-t-utilisation-de-l-outil-de-visualisation-gitk">TP2 : Création et initialisation d&#39;un dépôt. Utilisation de l&#39;outil de visualisation Gitk</h1>
+<p>Le but de ce TP est de découvrir la notion de dépôt, et de le parcourir via l&#39;outil graphique <code>gitk</code>.</p>
+<p>Il est aussi question de manipuler l&#39;outil <code>git gui</code> pour faire les mêmes opérations qu&#39;en ligne de commande.</p>
+<h2 id="cr-ation-d-un-d-p-t-local-depuis-un-d-p-t-distant">Création d&#39;un dépôt local depuis un dépôt distant</h2>
+<p>Pour récupérer un dépôt distant et son contenu, et créer un dépôt local, on utilise la commande git clone</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">clone</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//github.com/ericdescargues/training-git.git</span>
+</pre></div>
+
+</code></pre><p>Inspecter le dossier créé dans votre dossier courant.</p>
+<p>Inspecter le sous dossier <code>.git</code> et son contenu.</p>
+<p>Afficher et inspecter l&#39;historique avec</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">gitk</span>
+</pre></div>
+
+</code></pre><h2 id="cr-ation-d-un-d-p-t-local">Création d&#39;un dépôt local</h2>
+<ul>
+<li>Créer un nouveau répertoire dans le dossier utilisateur, y ouvrir un terminal</li>
+<li>Initialiser un dépôt avec la commande <code>git init</code></li>
+<li>Créer plusieurs fichiers texte, avec du contenu</li>
+</ul>
+<p>Pour créer rapidement des fichiers avec du contenu :</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">echo</span> <span class="s2">&quot;Some text&quot;</span> <span class="o">&gt;</span> <span class="nx">mon</span><span class="o">-</span><span class="nx">fichier</span><span class="p">.</span><span class="nx">txt</span>
+</pre></div>
+
+</code></pre><h2 id="cr-ation-du-premier-commit">Création du premier commit</h2>
+<p>On ajoute les fichiers à l&#39;index, puis on &quot;commit&quot;</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">add</span> <span class="o">--</span><span class="nx">all</span>
+<span class="nx">$</span> <span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s2">&quot;Mon premier commit&quot;</span>
+</pre></div>
+
+</code></pre><p>Lire l&#39;historique des commits avec la commande</p>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">git</span> <span class="nx">log</span>
+</pre></div>
+
+</code></pre><h2 id="visualisation-du-d-p-t-avec-gitk">Visualisation du dépôt avec gitk</h2>
+<ul>
+<li>Dans le répertoire du dépôt, lancer la commande <code>gitk</code>.</li>
+<li>Parcourir le dépôt avec l&#39;interface graphique.</li>
+<li>Repérer les actions clés de l&#39;interface.</li>
+</ul>
+<h2 id="d-couverte-de-git-gui">Découverte de git gui</h2>
+<p>Git gui est une interface graphique permettant de faire les mêmes opérations qu&#39;en ligne de commande.</p>
+<p>Pour lancer git gui, ouvrez simplement un shell ou GitBash à la racine de votre dépôt et lancer la commande <code>git gui</code></p>
+<p>Répéter les opérations de :</p>
+<ul>
+<li>Création d&#39;un deuxième fichier txt</li>
+</ul>
+<pre><code><div class="highlight"><pre><span class="nx">$</span> <span class="nx">echo</span> <span class="s2">&quot;Some text bis&quot;</span> <span class="o">&gt;</span> <span class="nx">mon</span><span class="o">-</span><span class="nx">fichier</span><span class="o">-</span><span class="nx">bis</span><span class="p">.</span><span class="nx">txt</span>
+</pre></div>
+
+</code></pre><ul>
+<li>Ajouter ce fichier dans l&#39;index</li>
+<li>Commit du fichier.</li>
+</ul>
+</body>
+</html>
