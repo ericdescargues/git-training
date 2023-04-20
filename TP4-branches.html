@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TP4-branches.md</title>
+  <link rel="stylesheet" href="/Users/rico/Documents/Formations/ELK/prog/markdown-to-html-master/test/ghstyle.css">
+</head>
+<body>
+<h1 id="tp4-les-principales-commandes-git-de-gestion-des-branches-cr-ation-fusion-comparaison-">TP4 : Les principales commandes GIT de gestion des branches (création, fusion, comparaison).</h1>
+<p>Le but de ce TP est de comprendre et d&#39;utiliser les principales commandes de GIT pour la gestion des branches.</p>
+<p>On utilisera le dépôt créé lors du TP2 et TP3 pour réaliser cet exercice</p>
+<h2 id="cr-ation-d-une-premi-re-branche">Création d&#39;une première branche</h2>
+<ul>
+<li>Depuis la branche principale, créer une branche &quot;branche1&quot;</li>
+<li>Y faire une modification (sur un des fichiers), puis &quot;commiter&quot; cette modification</li>
+<li>Retourner sur la branche principale</li>
+</ul>
+<h2 id="cr-ation-d-une-deuxi-me-branche">Création d&#39;une deuxième branche</h2>
+<ul>
+<li>Se placer à nouveau sur la branche master</li>
+<li>Créer une autre branche &quot;branche2&quot;</li>
+<li>Y faire une autre modification (autre fichier ou autre ligne !), puis &quot;commiter&quot; cette modification</li>
+<li>Retourner sur la branche principale</li>
+</ul>
+<h2 id="comparaison-des-changements">Comparaison des changements</h2>
+<p>Deux méthodes de comparaison</p>
+<ul>
+<li>Repérer les changements entre les branches via l&#39;outil graphique gitk</li>
+<li>Faire la même opération avec ligne de commande</li>
+</ul>
+<h2 id="fusion-des-branches-branche1-et-branche2-dans-la-branche-principale">Fusion des branches &quot;branche1&quot; et &quot;branche2&quot; dans la branche principale</h2>
+<p>Faire la fusion de branche1 dans master, puis branche2 dans master, avec la commande <code>git merge</code></p>
+<p>Il ne devrait pas y avoir de conflits si vous n&#39;avez pas édité la même ligne dans un même fichier.</p>
+<h2 id="cr-ation-de-conflit">Création de conflit</h2>
+<ul>
+<li>Supprimez vos branches branche1 et branche2, puis re-créez les.</li>
+<li>Recommencez tout le processus, en modifiant le même fichier sur la même ligne dans les 2 branches</li>
+</ul>
+<h2 id="r-solution-des-conflits">Résolution des conflits</h2>
+<p>Après le merge, vous devriez avoir un conflit.</p>
+<ul>
+<li>Ouvrez les fichiers en conflit pour les résoudre.</li>
+<li>Il faudra choisir entre les modifications apportées par la branche1, ou celles apportées par la branche2, ou bien choisir un autre contenu.</li>
+<li>Résoudre le conflit et commiter</li>
+</ul>
+<h2 id="le-rebase">Le rebase</h2>
+<p>Supprimer les branches branche1 et branche2</p>
+<h2 id="cr-ation-d-une-premi-re-branche">Création d&#39;une première branche</h2>
+<ul>
+<li>Depuis la branche principale, créer une branche &quot;branche1&quot;</li>
+<li>Y faire une modification (sur un des fichiers), puis &quot;commiter&quot; cette modification</li>
+<li>Retourner sur la branche principale</li>
+</ul>
+<h2 id="cr-ation-d-une-deuxi-me-branche">Création d&#39;une deuxième branche</h2>
+<ul>
+<li>Créer une autre branche &quot;branche2&quot;</li>
+<li>Y faire une autre modification (autre fichier ou autre ligne !), puis &quot;commiter&quot; cette modification</li>
+<li>Retourner sur la branche principale</li>
+</ul>
+<h2 id="strat-gie-de-merge-avec-rebase-">Stratégie de merge avec rebase :</h2>
+<ul>
+<li>Merger B1 dans master</li>
+<li>Rebaser B2 avec Master</li>
+<li>Merger B2 dans Master</li>
+</ul>
+</body>
+</html>
